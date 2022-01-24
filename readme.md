@@ -11,7 +11,9 @@ can handily paste it wherever.
 
 ## Installation
 
-Clone this repo somewhere, and then load the file on startup in your config:
+- clone this repo somewhere
+- set the [`giphy-api-key`](https://github.com/chamook/emacs-giphy/blob/master/giphy.el#L7) value to an [actual api key](https://developers.giphy.com/docs/api#quick-start-guide)
+- load the file on startup in your config:
 
 ```elisp
 (load "~/emacs-custom/giphy.el")
