@@ -10,6 +10,9 @@
   giphy-random-endpoint
   (format "https://api.giphy.com/v1/gifs/random?api_key=%s&tag=" giphy-api-key))
 
+(defun read-giphy-api-image (r)
+  (plist-get (plist-get (plist-get r 'images) 'original) 'url))
+
 (defun giphy ()
   "Generate a markdown snippet for a random giphy for the given keyword and put it on the kill-ring"
   (interactive)
@@ -30,6 +33,8 @@
                (format
                 "![%s](%s)"
                 (plist-get data 'title)
-                (plist-get data 'image_url))))
+                (read-giphy-api-image data))))
                  (message snippet)
                  (kill-new snippet)))))))))
+
+
