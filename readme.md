@@ -8,3 +8,11 @@ given keyword and puts it into a markdown snippet on the kill-ring - so you
 can handily paste it wherever.
 
 ![giphy links in emacs](giphy-emacs.gif)
+
+## Installation
+
+Clone this repo somewhere, and then load the file on startup in your config:
+
+```elisp
+(load "~/emacs-custom/giphy.el")
+```
